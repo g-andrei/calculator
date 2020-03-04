@@ -1,0 +1,88 @@
+body {
+  background-color: #0D0E0F;
+}
+
+.calculator {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  background-color: #324244;
+}
+
+/* ###### SCREEN ####### */
+
+.textView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 257px;
+  height: 50px;
+  text-align: center;
+  background-color: #D15D1F;
+  color: #171B1E;
+  margin-left: 4px;
+  margin-top: 3px;
+  border: 0;
+  font-size: 40px;
+}  
+
+.textView p {
+  margin: 5px;
+    
+}
+  
+/* ###### BUTTONS ####### */
+
+.button {
+  height: 60px;
+  width: 60px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  background-color: #44515B;
+  color: #171B1E;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.button:focus, 
+  .button-0:focus,
+    .button-equal:focus {
+  outline: none;
+}
+
+.button-0 {
+  height: 60px;
+  width: 127px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  background-color: #44515B;
+  color: #171B1E;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.button-equal {
+  height: 126px;
+  width: 60px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  background-color: #44515B;
+  color: #171B1E;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+
+/* ###### HISTORY ####### */
+
+.history {
+  width: 215px;
+  height: 380px;
+  background-color: #44515B;
+  opacity: 0.5;
+  display: none;
+}

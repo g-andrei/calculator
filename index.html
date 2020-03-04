@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>MY CALCULATOR</title>
+    <link rel="stylesheet" href="css/myCss.css">
+    <link rel="stylesheet" href="css/defCss.css">
+    <script src="script/myScript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex">
+                <div class="calculator">
+                  
+                    <!--    ###### SCREEN #####   -->
+                    <form name="form">
+                        <input class="textView" name="textView" id="screen">
+                    </form>
+
+
+                    <!--    ###### BUTTONS #####   -->
+
+                    <table>
+                        <tr>
+                            <td><input type="button" class="button" value="Clear" onclick=" clearScreen() "></td>
+                            <td><input type="button" class="button" value="+" onclick=" insertOperation('+') "></td>
+                            <td><input type="button" class="button" value="-" onclick=" insertOperation('-') "></td>
+                            <td><input type="button" class="button" value="Back" onclick=" backSpace() "></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" class="button" value="7" onclick=" insertNumber(7)" ></td>
+                            <td><input type="button" class="button" value="8" onclick=" insertNumber(8)" ></td>
+                            <td><input type="button" class="button" value="9" onclick=" insertNumber(9) "></td>
+                            <td><input type="button" class="button" value="/" onclick=" insertOperation('/') "></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" class="button" value="4" onclick=" insertNumber(4) "></td>
+                            <td><input type="button" class="button" value="5" onclick=" insertNumber(5) "></td>
+                            <td><input type="button" class="button" value="6" onclick=" insertNumber(6) "></td>
+                            <td><input type="button" class="button" value="*" onclick=" insertOperation('*') "></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" class="button" value="1" onclick=" insertNumber(1) "></td>
+                            <td><input type="button" class="button" value="2" onclick=" insertNumber(2) "></td>
+                            <td><input type="button" class="button" value="3" onclick=" insertNumber(3) "></td>
+                            <td rowspan="5"><input type="button" class="button-equal" value="=" onclick=" equal()"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><input type="button" class="button-0" value="0" onclick=" insertNumber(0) "></td>
+                            <td><input type="button" class="button" value="." onclick=" insertOperation('.') "></td>
+                        </tr>
+
+                    </table>
+                </div> 
+
+                <!--    ###### HISTORY #####   -->
+
+                <div class="history">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
