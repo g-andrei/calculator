@@ -86,8 +86,8 @@ function clearScreen() {
 // ###### BACKSPACE ######
 
 function backSpace() {
-    var input = document.getElementById("screen").value;
-    var back = input;
+    var input = document.getElementById("screen");
+    var back = input.value;
 
     if ( back.length > 0 ) {
         back = back.substring(0, back.length-1 );
