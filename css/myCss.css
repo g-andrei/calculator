@@ -1,31 +1,53 @@
+@font-face {
+  src: url(../fonts/digital-7.ttf);
+  font-family: digital;
+}
+
 body {
-  background-color: #0D0E0F;
+  background-color: #1D2021;
 }
 
 .calculator {
   display: block;
   position: absolute;
   top: 20%;
-  left: 40%;
+  left: 35%;
   background-color: #324244;
 }
 
 /* ###### SCREEN ####### */
 
-.textView {
+.textViewInput {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 257px;
   height: 50px;
   text-align: center;
+  font-size: 35px;
+  font-family: digital;
+  background-color: #D15D1F;
+  color: #171B1E;
+  margin-left: 4px;
+  margin-top: 3px;
+  border: 0; 
+}  
+
+.textViewOutput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 257px;
+  height: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-family: digital;
   background-color: #D15D1F;
   color: #171B1E;
   margin-left: 4px;
   margin-top: 3px;
   border: 0;
-  font-size: 40px;
-}  
+}
 
 .textView p {
   margin: 5px;
@@ -39,6 +61,7 @@ body {
   width: 60px;
   margin: 1px;
   border: 0;
+  border-radius: 5px;
   padding: 0;
   background-color: #44515B;
   color: #171B1E;
@@ -48,7 +71,10 @@ body {
 
 .button:focus, 
   .button-0:focus,
-    .button-equal:focus {
+    .button-equal:focus,
+      .openHistoryBtn:focus,
+        .closeHistoryBtn:focus,
+         .cleanHistoryBtn:focus {
   outline: none;
 }
 
@@ -57,6 +83,7 @@ body {
   width: 127px;
   margin: 1px;
   border: 0;
+  border-radius: 5px;
   padding: 0;
   background-color: #44515B;
   color: #171B1E;
@@ -69,6 +96,7 @@ body {
   width: 60px;
   margin: 1px;
   border: 0;
+  border-radius: 5px;
   padding: 0;
   background-color: #44515B;
   color: #171B1E;
@@ -79,10 +107,66 @@ body {
 
 /* ###### HISTORY ####### */
 
-.history {
-  width: 215px;
-  height: 380px;
+.historyScreen {
+  display: none;
+  position: absolute;
+  float: right;
+  overflow: auto;
+  top: 0px;
+  left: 268px;
+  width: 325px;
+  height: 441px;
   background-color: #44515B;
   opacity: 0.5;
-  display: none;
+  text-align: center;
+  padding-top: 36px;
+}
+
+#historyPanel {
+  position: absolute;
+  left: 89px;
+  top: 3px;
+  color: #f17c3e;
+  font-size: 25px;
+}
+
+.listHistory p {
+  color: whitesmoke;
+  font-size: 23px;
+}
+
+.openHistoryBtn {
+  width: 123px;
+  height: 25px;
+  margin: 4px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 21px;
+  background-color: #44515B;
+  color: #171B1E;
+}
+
+.cleanHistoryBtn {
+  width: 123px;
+  height: 25px;
+  margin: 4px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 16px;
+  background-color: #44515B;
+  color: #171B1E;
+}
+
+.closeHistoryBtn {
+  height: 13px;
+  width: 13px;
+  border: 0;
+  padding: 1px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: #f73939;
 }

@@ -17,15 +17,20 @@
                   
                     <!--    ###### SCREEN #####   -->
                     <form name="form">
-                        <input class="textView" name="textView" id="screen">
+                        <input class="textViewInput" name="textView" id="screenInput">
+                        <input class="textViewOutput" name="textView" id="screenOutput">
                     </form>
 
+                    <!--    ###### BUTTONS FOR HISTORY #####   -->
+
+                    <button type="button" class="openHistoryBtn" onclick="openHistoryScreen()"> HISTORY </button>
+                    <button type="button" class="cleanHistoryBtn" onclick="cleanHistory()"> CLEAN HISTORY </button>
 
                     <!--    ###### BUTTONS #####   -->
 
                     <table>
                         <tr>
-                            <td><input type="button" class="button" value="Clear" onclick=" clearScreen() "></td>
+                            <td><input type="button" class="button" value="Clean" onclick=" cleanScreen() "></td>
                             <td><input type="button" class="button" value="+" onclick=" insertOperation('+') "></td>
                             <td><input type="button" class="button" value="-" onclick=" insertOperation('-') "></td>
                             <td><input type="button" class="button" value="Back" onclick=" backSpace() "></td>
@@ -49,7 +54,7 @@
                             <td><input type="button" class="button" value="1" onclick=" insertNumber(1) "></td>
                             <td><input type="button" class="button" value="2" onclick=" insertNumber(2) "></td>
                             <td><input type="button" class="button" value="3" onclick=" insertNumber(3) "></td>
-                            <td rowspan="5"><input type="button" class="button-equal" value="=" onclick=" equal()"></td>
+                            <td rowspan="5"><input type="button" class="button-equal" value="=" onclick=" equal(); historyTrack();"></td>
                         </tr>
 
                         <tr>
@@ -57,14 +62,20 @@
                             <td><input type="button" class="button" value="." onclick=" insertOperation('.') "></td>
                         </tr>
 
+                        
                     </table>
+
+                    <!--    ###### HISTORY #####   -->
+
+                    <div class="historyScreen" id="historyScreen">
+                        <button type="button" class="closeHistoryBtn" onclick="closeHistoryScreen()"> X </button>
+                        <p id="historyPanel">History Panel</p>
+
+                        <div class="listHistory" id="listHistory"></div>
+                    </div>
                 </div> 
 
-                <!--    ###### HISTORY #####   -->
-
-                <div class="history">
-
-                </div>
+                
             </div>
         </div>
     </div>
